@@ -11,6 +11,13 @@ RGBASM  := ${RGBDS}rgbasm
 RGBLINK := ${RGBDS}rgblink
 RGBFIX  := ${RGBDS}rgbfix
 RGBGFX  := ${RGBDS}rgbgfx
+#ifeq ($(OS), Windows_NT)
+#  EXE_SUFFIX := .exe
+#  PY := py -3
+#else
+#  EXE_SUFFIX :=
+#  PY := python3
+#endif
 
 INCDIRS  := src/ include/
 ASFLAGS  = -p ${PADVALUE} $(addprefix -I,${INCDIRS}) -Wextra
